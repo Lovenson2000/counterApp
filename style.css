@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: rgb(198, 206, 215);
 }
 
 .main-container {
@@ -20,7 +21,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(198, 206, 215);
     border-radius: 6px;
 
 }
