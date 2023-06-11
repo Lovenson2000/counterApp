@@ -1,6 +1,6 @@
 
-let content = document.getElementById("content");
-let integerValue = parseInt(document.getElementById("content").innerHTML);
+let content = document.getElementById("content").innerHTML;
+let integerValue = parseInt(content);
 
 const arrayButton = document.getElementsByTagName("button");
 const buttons = Object.entries(arrayButton);
