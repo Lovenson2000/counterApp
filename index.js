@@ -1,33 +1,33 @@
 
-
-//Getting the different placeholders
-
 let content = document.getElementById("content");
-let integerValue = parseInt(content.innerHTML);
+let integerValue = parseInt(document.getElementById("content").innerHTML);
 
-const decreaseButton = document.getElementById("btn-decrease");
-const resetButton = document.getElementById("btn-reset");
-const increaseButton = document.getElementById("btn-increase");
+const arrayButton = document.getElementsByTagName("button");
+const buttons = Object.entries(arrayButton);
+buttons.forEach((button, index) => {
 
-
-//Increasing value when the increase button is clicked on
-increaseButton.addEventListener("click", () => { 
-    integerValue += 1;
-    content.innerHTML = integerValue;
+    if (index === 0) {    //Decrease by -1 for index 0
+        button = document.getElementById("btn-decrease").addEventListener("click", () => {
+            integerValue -= 1;
+            content.innerHTML = integerValue;
+        })
+    }
+    else if (index === 1) {     // Reset to 0 for index 1
+        button = document.getElementById("btn-reset").addEventListener("click", () => {
+            integerValue = 0;
+            content.innerHTML = integerValue;
+        })
+    }
+    else if(index === 2) {     //Increase by 1 for index 2
+        button = document.getElementById("btn-increase").addEventListener("click", () => {
+            integerValue += 1;
+            content.innerHTML = integerValue;
+        })      
+    }
 })
 
-//Decreasing value when the decrease button is clicked on
-decreaseButton.addEventListener("click", () => {
-    integerValue -= 1;
-    content.innerHTML = integerValue;
-})
 
-//Going back to the initial value when reset
-resetButton.addEventListener("click", () => {
-    integerValue = 0;
-    content.innerHTML = integerValue;
 
-})
 
 
 
