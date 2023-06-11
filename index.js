@@ -22,7 +22,10 @@ function changeValue(index) {
 
         case 2:
             integerValue += 1;
-            
+            break;
+
+        default:
+            integerValue = 0;
     }
     content.innerHTML = integerValue;
 }
