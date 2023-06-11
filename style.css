@@ -21,6 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(198, 206, 215);
+    border-radius: 6px;
 
 }
 
@@ -29,7 +30,6 @@ body {
     font-size: 5rem;
 }
 #content {
-
     font-size: 6rem;
 }
 
@@ -50,4 +50,15 @@ button {
     border-radius: 8px;
     cursor: pointer;
     
+}
+
+@media(max-width:30rem) {
+
+    .heading {
+        font-size: 4rem;
+    }
+
+    #content {
+        font-size: 4rem;
+    }
 }
